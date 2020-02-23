@@ -1,9 +1,27 @@
 {
   "compilerOptions": {
-    // because we're compiling with Babel instead of TypeScript
-    // and we're only using TypeScript for type checking, we'll set "noEmit"
-    // to true so running type checking doesn't generate any files.
-    "noEmit": true,
-    "baseUrl": "./src"
-  }
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "assets/*": ["src/assets/*"]
+    }
+  },
+  "include": ["./src/**/*", "./typings/*.d.ts"],
+  "exclude": [
+    "./node_modules",
+    "./build",
+    "./scripts",
+    "./docker",
+    "./public",
+    "./coverage"
+  ]
 }

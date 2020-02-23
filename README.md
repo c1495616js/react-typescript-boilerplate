@@ -11,6 +11,14 @@ https://thomlom.dev/setup-eslint-prettier-react/
 https://dev.to/botreetechnologies/
 setting-up-husky-pre-commit-hook-with-eslint-prettier-and-lint-staged-for-react-and-react-native-d05
 
+### React-Typescript-Guide
+
+https://github.com/piotrwitek/react-redux-typescript-guide/blob/master/README.md#react---type-definitions-cheatsheet
+
+https://github.com/typescript-cheatsheets/react-typescript-cheatsheet
+
+https://www.sitepoint.com/react-with-typescript-best-practices/
+
 ### code
 
 - `husky`

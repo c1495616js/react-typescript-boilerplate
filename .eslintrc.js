@@ -8,9 +8,10 @@ module.exports = {
     },
     project: './tsconfig.json',
   },
-  plugins: ['@typescript-eslint/eslint-plugin'],
+  plugins: ['react', '@typescript-eslint/eslint-plugin'],
   extends: [
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'eslint-config-prettier',

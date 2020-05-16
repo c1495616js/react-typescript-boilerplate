@@ -143,9 +143,15 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         template: PATHS.template,
       }),
-      new CopyPlugin([
-        { from: PATHS.public, to: PATHS.dist, ignore: ['*.html'] },
-      ]),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: PATHS.public,
+            to: PATHS.dist,
+            globOptions: { ignore: ['*.html'] },
+          },
+        ],
+      }),
     ],
   };
 

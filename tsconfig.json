@@ -12,10 +12,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "assets/*": ["src/assets/*"]
+      "assets/*": ["src/assets/*"],
+      "*": ["src/shared/*", "test/*"]
     }
   },
-  "include": ["./src/**/*", "./typings/*.d.ts"],
+  "include": ["src/**/*", "./typings/*.d.ts"],
   "exclude": [
     "./node_modules",
     "./build",

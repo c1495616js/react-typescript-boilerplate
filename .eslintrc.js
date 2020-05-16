@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -16,6 +18,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'eslint-config-prettier',
     'eslint-config-prettier/@typescript-eslint',
+    'plugin:jest/recommended',
   ],
   rules: {
     strict: ['error', 'never'],
@@ -23,4 +26,20 @@ module.exports = {
   env: {
     browser: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**'],
+      settings: { 'import/resolver': 'webpack' },
+    },
+    {
+      files: ['**/__test__/**'],
+      settings: {
+        'import/resolver': {
+          jest: {
+            jestConfigFile: path.join(__dirname, './jest.config.js'),
+          },
+        },
+      },
+    },
+  ],
 };

@@ -4,6 +4,8 @@
 
 ### Ref
 
+https://medium.com/swlh/setting-up-a-react-typescript-sass-webpack-and-babel-7-project-in-6-steps-b4d172d1d0d6
+
 https://developerhandbook.com/webpack/webpack-4-from-absolute-scratch/
 
 https://thomlom.dev/setup-eslint-prettier-react/
@@ -55,8 +57,31 @@ in `package.json`
   }
 ```
 
+## Testing
+
+```
+npm install --save-dev jest @types/jest
+```
+
+### Jest path alias
+
+https://codeandsuch.github.io/webpack-aliases-typescript/
+
+### Jest + Typescript
+
+https://github.com/basarat/typescript-book/blob/master/docs/testing/jest.md
+
 ## MISC
 
 ### trailling comma
 
 https://medium.com/@nikgraf/why-you-should-enforce-dangling-commas-for-multiline-statements-d034c98e36f8
+
+### import without \*
+
+in `tsconfig.json`:
+
+```
+ esModuleInterop: true,
+ allowSyntheticDefaultImports: true,
+```

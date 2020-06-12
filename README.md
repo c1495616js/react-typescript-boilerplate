@@ -85,3 +85,7 @@ in `tsconfig.json`:
  esModuleInterop: true,
  allowSyntheticDefaultImports: true,
 ```
+
+## Good Ref:
+
+https://www.sitepoint.com/react-with-typescript-best-practices/

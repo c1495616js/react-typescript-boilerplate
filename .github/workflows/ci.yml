@@ -23,6 +23,7 @@ jobs:
         if: github.event.name == 'push'
         run: npm run build
       - name: Deploy to gh-pages
+        if: github.event.name == 'push'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

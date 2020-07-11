@@ -26,9 +26,20 @@ jobs:
       - run: npm run test
         env:
           CI: true
+      - name: Upload Test Coverage
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage
+          path: coverage
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
+      - name: Upload Dist folder
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
       - name: Deploy to gh-pages
         if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v3
